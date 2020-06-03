@@ -62,4 +62,20 @@ public class ShoppingCart {
     private OrderItem findOrderFromProduct(Product product) {
         return items.stream().filter(o -> o.getProduct().getId().equals(product.getId())).findFirst().orElse(null);
     }
+
+    public List<OrderItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<OrderItem> items) {
+        this.items = items;
+    }
+
+    public Double getTotalCost() {
+        return totalCost;
+    }
+
+    public void setTotalCost(Double totalCost) {
+        this.totalCost = totalCost;
+    }
 }

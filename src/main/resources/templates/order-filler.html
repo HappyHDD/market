@@ -24,7 +24,7 @@
 <div class="container">
     <br>
     <h1>Оформление заказа</h1>
-    <form th:action="@{/shop/order/confirm}" th:object="${order}" method="post" class="form-horizontal">
+    <form th:action="@{/order/confirm}" th:object="${order}" method="post" class="form-horizontal">
         <table class="table table-hover">
             <thead class="thead-dark">
             <tr>
@@ -34,7 +34,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="orderItem : ${order.orderItems}">
+            <tr th:each="orderItem : ${order.getOrderItem()}">
                 <td th:text="${orderItem.product.title}"/>
                 <td th:text="${orderItem.quantity}"/>
                 <td th:text="${orderItem.totalPrice}"/>
@@ -68,8 +68,7 @@
             <br>
             <br>
             <div class="col-sm-6 controls">
-                <!--<a class="btn btn-primary" th:href="@{'/shop/order/result/' + ${order.id}}">Оплатить</a>-->
-                <a class="btn btn-primary" th:href="@{'/paypal/buy'}">Оплатить</a>
+                <a class="btn btn-primary" th:href="@{'/order/result/'+${order.id}}">Оплатить</a>
                 <button class="btn btn-secondary" th:href="@{/shop}">Вернуться на страницу магазина</button>
             </div>
         </div>
