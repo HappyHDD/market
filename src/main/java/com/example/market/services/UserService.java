@@ -1,0 +1,10 @@
+package com.example.market.services;
+
+import com.example.market.entites.SystemUser;
+import com.example.market.entites.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+public interface UserService extends UserDetailsService {
+    User findByUserName(String username);
+    boolean save(SystemUser systemUser);
+}
