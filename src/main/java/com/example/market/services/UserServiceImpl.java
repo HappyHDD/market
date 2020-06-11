@@ -18,7 +18,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-import static org.graalvm.compiler.options.OptionType.User;
 
 @Service
 public class UserServiceImpl implements UserService {

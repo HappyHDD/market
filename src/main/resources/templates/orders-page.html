@@ -41,8 +41,8 @@
             </td>
             <td th:text="${order.createAt}"/>
             <td>
-                <a th:if="${order.status.id == 1}" th:href="@{'/admin/orders/ready/' + ${order.id}}" >Заказ отправлен</a>
-                <a th:href="@{'/admin/orders/info/' + ${order.id}}" >Информация</a>
+<!--                <a th:if="${order.status.id == 1}" th:href="@{'/admin/orders/ready/' + ${order.id}}" >Заказ отправлен</a>-->
+                <a th:href="@{'/order/result/' + ${order.id}}" >Информация</a>
             </td>
         </tr>
         </tbody>

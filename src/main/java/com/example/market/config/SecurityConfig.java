@@ -1,6 +1,6 @@
 package com.example.market.config;
 
-import com.geekbrains.geekmarketwinter.services.UserService;
+import com.example.market.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

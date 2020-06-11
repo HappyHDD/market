@@ -37,6 +37,10 @@
                     th:classappend="${activeTab == 'Profile' ? 'active' : ''}">
                     <a class="nav-link" th:href="@{/profile}">Профиль</a>
                 </li>
+                <li sec:authorize="isAuthenticated()" class="nav-item"
+                    th:classappend="${activeTab == 'Profile' ? 'active' : ''}">
+                    <a class="nav-link" th:href="@{/order/show}">Заказы</a>
+                </li>
                 <li sec:authorize="hasRole('ADMIN')" class="nav-item"
                     th:classappend="${activeTab == 'AdminDashboard' ? 'active' : ''}">
                     <a class="nav-link" th:href="@{/admin}">Админка</a>
