@@ -3,6 +3,8 @@ package com.example.market.entites;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.HashMap;
+import java.util.Map;
 
 @Entity
 @Data
@@ -31,6 +33,13 @@ public class Role {
 
 	@Column(name = "name")
 	private String name;
+
+	public static final Map<String, String> COLUMN_MAPPINGS = new HashMap<>();
+
+	static {
+		COLUMN_MAPPINGS.put("id", "id");
+		COLUMN_MAPPINGS.put("name", "name");
+	}
 
 	public Role() {
 	}
