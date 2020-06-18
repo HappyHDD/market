@@ -4,8 +4,6 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 
 @Entity
 @Data
@@ -38,17 +36,6 @@ public class User {
     private Collection<Role> roles;
 
     public User() {
-    }
-
-    public static final Map<String, String> COLUMN_MAPPINGS = new HashMap<>();
-
-    static {
-        COLUMN_MAPPINGS.put("id", "id");
-        COLUMN_MAPPINGS.put("username", "userName");
-        COLUMN_MAPPINGS.put("password", "password");
-        COLUMN_MAPPINGS.put("first_name", "firstName");
-        COLUMN_MAPPINGS.put("last_name", "lastName");
-        COLUMN_MAPPINGS.put("email", "email");
     }
 
     public User(String userName, String password, String firstName, String lastName, String email) {
